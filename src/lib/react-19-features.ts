@@ -107,3 +107,13 @@ export const react19Features: React19Feature[] = [
     apiLabel: "Client",
   },
 ];
+
+export function getReact19Feature(id: React19Feature["id"]) {
+  const feature = react19Features.find((item) => item.id === id);
+
+  if (!feature) {
+    throw new Error(`Unknown React 19 feature: ${id}`);
+  }
+
+  return feature;
+}
