@@ -12,6 +12,8 @@
   "dependencies": {
     "@base-ui/react": "^1.1.0",
     "@fontsource-variable/geist-mono": "^5.2.7",
+    "@fontsource/ibm-plex-mono": "^5.2.7",
+    "@fontsource/ibm-plex-sans": "^5.2.8",
     "@tailwindcss/vite": "^4.1.17",
     "@tanstack/react-router": "^1.157.18",
     "@tanstack/react-router-devtools": "^1.157.18",
