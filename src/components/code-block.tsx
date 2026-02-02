@@ -13,9 +13,7 @@ export function CodeBlock({ title, code, caption }: CodeBlockProps) {
         <CardTitle className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">
           {title}
         </CardTitle>
-        {caption ? (
-          <div className="text-xs text-muted-foreground">{caption}</div>
-        ) : null}
+        {caption ? <div className="text-xs text-muted-foreground">{caption}</div> : null}
       </CardHeader>
       <CardContent>
         <pre className="overflow-x-auto rounded-lg border border-border/60 bg-background/80 p-4 text-xs leading-relaxed text-foreground shadow-inner">

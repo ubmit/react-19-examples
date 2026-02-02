@@ -45,11 +45,7 @@ function AsyncTransitionsExample() {
   const refresh = () => {
     startTransition(async () => {
       await new Promise((resolve) => setTimeout(resolve, 650));
-      setEntries([
-        "Latency report · 96ms",
-        "Cache hit rate · 97%",
-        "Cold start · 180ms",
-      ]);
+      setEntries(["Latency report · 96ms", "Cache hit rate · 97%", "Cold start · 180ms"]);
     });
   };
 
@@ -57,9 +53,7 @@ function AsyncTransitionsExample() {
     <div className="space-y-4">
       <div className="flex items-center gap-2 text-xs text-muted-foreground">
         <span>Transition state</span>
-        <Badge variant={pending ? "default" : "secondary"}>
-          {pending ? "Pending" : "Idle"}
-        </Badge>
+        <Badge variant={pending ? "default" : "secondary"}>{pending ? "Pending" : "Idle"}</Badge>
       </div>
       <div className="space-y-2 rounded-xl border border-border/60 bg-background/70 p-3 text-xs text-muted-foreground">
         {entries.map((item) => (

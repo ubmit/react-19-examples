@@ -51,12 +51,7 @@ function UseFormStatusExample() {
     <form action={submit} className="space-y-4">
       <Field>
         <FieldLabel htmlFor="form-status-email">Team email</FieldLabel>
-        <Input
-          id="form-status-email"
-          name="email"
-          placeholder="dev@company.com"
-          required
-        />
+        <Input id="form-status-email" name="email" placeholder="dev@company.com" required />
       </Field>
       <div className="flex flex-wrap items-center gap-2">
         <SubmitButton />

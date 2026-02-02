@@ -57,11 +57,7 @@ function ActionFormActionExample() {
     <form action={savePost} className="space-y-4">
       <Field>
         <FieldLabel htmlFor="form-action-title">Post title</FieldLabel>
-        <Input
-          id="form-action-title"
-          name="title"
-          placeholder="React 19 quickstart"
-        />
+        <Input id="form-action-title" name="title" placeholder="React 19 quickstart" />
       </Field>
       <div className="flex flex-wrap gap-2">
         <Button type="submit">Save post</Button>

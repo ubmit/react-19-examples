@@ -30,10 +30,7 @@ type DraftState = {
   saves: number;
 };
 
-async function saveDraft(
-  prevState: DraftState,
-  formData: FormData,
-): Promise<DraftState> {
+async function saveDraft(prevState: DraftState, formData: FormData): Promise<DraftState> {
   const nextName = String(formData.get("name") || "");
   await new Promise((resolve) => setTimeout(resolve, 650));
   return {
@@ -70,25 +67,16 @@ function UseActionStateExample() {
     <form action={formAction} className="space-y-4">
       <Field>
         <FieldLabel htmlFor="use-action-state-name">Display name</FieldLabel>
-        <Input
-          id="use-action-state-name"
-          name="name"
-          placeholder="React 19 guide"
-          required
-        />
+        <Input id="use-action-state-name" name="name" placeholder="React 19 guide" required />
       </Field>
       <div className="flex flex-wrap items-center gap-2">
         <Button type="submit" disabled={pending}>
           {pending ? "Saving..." : "Save draft"}
         </Button>
         <Badge variant="secondary">{state.status}</Badge>
-        <span className="text-xs text-muted-foreground">
-          Saved {state.saves} times
-        </span>
+        <span className="text-xs text-muted-foreground">Saved {state.saves} times</span>
       </div>
-      <div className="text-xs text-muted-foreground">
-        Latest name: {state.name || "—"}
-      </div>
+      <div className="text-xs text-muted-foreground">Latest name: {state.name || "—"}</div>
     </form>
   );
 }

@@ -19,18 +19,16 @@ function Index() {
           <div className="flex flex-wrap items-center gap-2">
             <Badge variant="outline">React 19</Badge>
             <Badge variant="secondary">Dev Docs</Badge>
-            <Badge variant="secondary">
-              {react19Features.length} Features
-            </Badge>
+            <Badge variant="secondary">{react19Features.length} Features</Badge>
           </div>
           <div className="space-y-3">
             <h1 className="text-4xl font-semibold tracking-tight text-foreground">
               Documentation with live React 19 examples.
             </h1>
             <p className="max-w-2xl text-sm text-muted-foreground">
-              A focused field guide for the React 19 release: server actions,
-              transitions, new hooks, and platform upgrades. Each route ships an
-              interactive demo so you can feel how the API behaves.
+              A focused field guide for the React 19 release: server actions, transitions, new
+              hooks, and platform upgrades. Each route ships an interactive demo so you can feel how
+              the API behaves.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
@@ -62,9 +60,7 @@ function Index() {
           <Card key={item.title} className="border-border/70 bg-card/70">
             <CardHeader className="space-y-2">
               <CardTitle className="text-base">{item.title}</CardTitle>
-              <p className="text-sm text-muted-foreground">
-                {item.description}
-              </p>
+              <p className="text-sm text-muted-foreground">{item.description}</p>
             </CardHeader>
           </Card>
         ))}
@@ -72,12 +68,8 @@ function Index() {
 
       <section className="space-y-4">
         <div className="flex items-center justify-between">
-          <h2 className="text-xl font-semibold text-foreground">
-            All React 19 features
-          </h2>
-          <span className="text-xs text-muted-foreground">
-            Updated February 2026
-          </span>
+          <h2 className="text-xl font-semibold text-foreground">All React 19 features</h2>
+          <span className="text-xs text-muted-foreground">Updated February 2026</span>
         </div>
         <Separator />
         <div className="grid gap-4 md:grid-cols-2">
@@ -88,16 +80,12 @@ function Index() {
             >
               <CardHeader className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <CardTitle className="text-base">
-                    {feature.title}
-                  </CardTitle>
+                  <CardTitle className="text-base">{feature.title}</CardTitle>
                   <Badge variant="secondary" className="text-[10px]">
                     {feature.apiLabel}
                   </Badge>
                 </div>
-                <p className="text-sm text-muted-foreground">
-                  {feature.summary}
-                </p>
+                <p className="text-sm text-muted-foreground">{feature.summary}</p>
               </CardHeader>
               <CardContent>
                 <Button variant="outline" asChild className="w-full">

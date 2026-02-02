@@ -42,10 +42,10 @@ function UseOptimisticExample() {
   const [pending, startTransition] = useTransition();
   const [value, setValue] = useState("");
 
-  const [optimisticItems, addOptimisticItem] = useOptimistic(
-    items,
-    (state, item: string) => [...state, `${item} (optimistic)`],
-  );
+  const [optimisticItems, addOptimisticItem] = useOptimistic(items, (state, item: string) => [
+    ...state,
+    `${item} (optimistic)`,
+  ]);
 
   const submit = () => {
     const next = value.trim();
@@ -76,9 +76,7 @@ function UseOptimisticExample() {
         <Button onClick={submit} disabled={pending || !value.trim()}>
           {pending ? "Committing..." : "Add task"}
         </Button>
-        <Badge variant={pending ? "default" : "secondary"}>
-          {pending ? "Syncing" : "Idle"}
-        </Badge>
+        <Badge variant={pending ? "default" : "secondary"}>{pending ? "Syncing" : "Idle"}</Badge>
       </div>
       <div className="space-y-1 rounded-xl border border-border/60 bg-background/70 p-3 text-xs text-muted-foreground">
         {optimisticItems.map((item) => (

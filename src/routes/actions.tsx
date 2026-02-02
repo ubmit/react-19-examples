@@ -54,9 +54,7 @@ function ActionsExample() {
     <div className="space-y-4">
       <div className="flex items-center justify-between text-xs text-muted-foreground">
         <span>Action queue</span>
-        <Badge variant={pending ? "default" : "secondary"}>
-          {pending ? "Running" : "Idle"}
-        </Badge>
+        <Badge variant={pending ? "default" : "secondary"}>{pending ? "Running" : "Idle"}</Badge>
       </div>
       <div className="space-y-1 rounded-xl border border-border/60 bg-background/70 p-3 text-xs text-muted-foreground">
         {log.length === 0 ? (

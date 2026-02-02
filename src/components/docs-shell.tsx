@@ -41,10 +41,7 @@ function DocsHeader() {
             R19
           </div>
           <div>
-            <Link
-              to="/"
-              className="text-lg font-semibold tracking-tight text-foreground"
-            >
+            <Link to="/" className="text-lg font-semibold tracking-tight text-foreground">
               React 19 Field Guide
             </Link>
             <div className="text-xs text-muted-foreground">
@@ -85,19 +82,12 @@ function FeatureNav() {
             )}
           >
             <div className="flex items-center justify-between gap-2">
-              <span className="text-sm font-medium text-foreground">
-                {feature.title}
-              </span>
-              <Badge
-                variant={isActive ? "default" : "secondary"}
-                className="text-[10px]"
-              >
+              <span className="text-sm font-medium text-foreground">{feature.title}</span>
+              <Badge variant={isActive ? "default" : "secondary"} className="text-[10px]">
                 {feature.apiLabel}
               </Badge>
             </div>
-            <p className="mt-1 text-xs text-muted-foreground">
-              {feature.summary}
-            </p>
+            <p className="mt-1 text-xs text-muted-foreground">{feature.summary}</p>
           </Link>
         );
       })}

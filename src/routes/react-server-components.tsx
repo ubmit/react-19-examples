@@ -38,10 +38,7 @@ function ReactServerComponentsPage() {
 }
 
 function ReactServerComponentsExample() {
-  const [chunks, setChunks] = useState<string[]>([
-    "<ServerHeader />",
-    "<InventoryGrid />",
-  ]);
+  const [chunks, setChunks] = useState<string[]>(["<ServerHeader />", "<InventoryGrid />"]);
   const [note, setNote] = useState("");
 
   const streamChunk = () => {
@@ -64,9 +61,7 @@ function ReactServerComponentsExample() {
         Stream next chunk
       </Button>
       <div className="rounded-xl border border-border/60 bg-background/70 p-3 text-xs text-muted-foreground">
-        <div className="mb-2 font-medium text-foreground">
-          Client-only notes
-        </div>
+        <div className="mb-2 font-medium text-foreground">Client-only notes</div>
         <Textarea
           value={note}
           onChange={(event) => setNote(event.target.value)}

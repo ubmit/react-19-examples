@@ -60,19 +60,13 @@ function MetadataStylesheetExample() {
   const [description, setDescription] = useState(
     "Interactive notes and examples for React 19 APIs.",
   );
-  const [theme, setTheme] = useState<(typeof themes)[number]["value"]>(
-    "mint",
-  );
+  const [theme, setTheme] = useState<(typeof themes)[number]["value"]>("mint");
 
   return (
     <div className="space-y-4">
       <Field>
         <FieldLabel htmlFor="meta-title">Title</FieldLabel>
-        <Input
-          id="meta-title"
-          value={title}
-          onChange={(event) => setTitle(event.target.value)}
-        />
+        <Input id="meta-title" value={title} onChange={(event) => setTitle(event.target.value)} />
       </Field>
       <Field>
         <FieldLabel htmlFor="meta-description">Description</FieldLabel>
