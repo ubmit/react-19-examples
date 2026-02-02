@@ -83,9 +83,9 @@ function MetadataStylesheetExample() {
         />
       </Field>
       <Field>
-        <FieldLabel>Theme stylesheet</FieldLabel>
+        <FieldLabel htmlFor="meta-theme">Theme stylesheet</FieldLabel>
         <Select value={theme} onValueChange={setTheme}>
-          <SelectTrigger>
+          <SelectTrigger id="meta-theme">
             <SelectValue placeholder="Pick a theme" />
           </SelectTrigger>
           <SelectContent>

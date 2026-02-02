@@ -50,6 +50,8 @@ function PreloadingApisExample() {
         <FieldLabel htmlFor="preload-host">Host</FieldLabel>
         <Input
           id="preload-host"
+          type="url"
+          autoComplete="url"
           value={host}
           onChange={(event) => setHost(event.target.value)}
         />
