@@ -9,80 +9,8 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as UseOptimisticRouteImport } from './routes/useOptimistic'
-import { Route as UseFormStatusRouteImport } from './routes/useFormStatus'
-import { Route as UseActionStateRouteImport } from './routes/useActionState'
-import { Route as UseRouteImport } from './routes/use'
-import { Route as ServerActionsRouteImport } from './routes/server-actions'
-import { Route as RefAsPropRouteImport } from './routes/ref-as-prop'
-import { Route as ReactServerComponentsRouteImport } from './routes/react-server-components'
-import { Route as PreloadingApisRouteImport } from './routes/preloading-apis'
-import { Route as MetadataStylesheetRouteImport } from './routes/metadata-stylesheet'
-import { Route as AsyncTransitionsRouteImport } from './routes/async-transitions'
-import { Route as ActionsRouteImport } from './routes/actions'
-import { Route as ActionFormActionRouteImport } from './routes/action-formAction'
 import { Route as IndexRouteImport } from './routes/index'
 
-const UseOptimisticRoute = UseOptimisticRouteImport.update({
-  id: '/useOptimistic',
-  path: '/useOptimistic',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const UseFormStatusRoute = UseFormStatusRouteImport.update({
-  id: '/useFormStatus',
-  path: '/useFormStatus',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const UseActionStateRoute = UseActionStateRouteImport.update({
-  id: '/useActionState',
-  path: '/useActionState',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const UseRoute = UseRouteImport.update({
-  id: '/use',
-  path: '/use',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServerActionsRoute = ServerActionsRouteImport.update({
-  id: '/server-actions',
-  path: '/server-actions',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const RefAsPropRoute = RefAsPropRouteImport.update({
-  id: '/ref-as-prop',
-  path: '/ref-as-prop',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ReactServerComponentsRoute = ReactServerComponentsRouteImport.update({
-  id: '/react-server-components',
-  path: '/react-server-components',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreloadingApisRoute = PreloadingApisRouteImport.update({
-  id: '/preloading-apis',
-  path: '/preloading-apis',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MetadataStylesheetRoute = MetadataStylesheetRouteImport.update({
-  id: '/metadata-stylesheet',
-  path: '/metadata-stylesheet',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AsyncTransitionsRoute = AsyncTransitionsRouteImport.update({
-  id: '/async-transitions',
-  path: '/async-transitions',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ActionsRoute = ActionsRouteImport.update({
-  id: '/actions',
-  path: '/actions',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ActionFormActionRoute = ActionFormActionRouteImport.update({
-  id: '/action-formAction',
-  path: '/action-formAction',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -91,200 +19,28 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/action-formAction': typeof ActionFormActionRoute
-  '/actions': typeof ActionsRoute
-  '/async-transitions': typeof AsyncTransitionsRoute
-  '/metadata-stylesheet': typeof MetadataStylesheetRoute
-  '/preloading-apis': typeof PreloadingApisRoute
-  '/react-server-components': typeof ReactServerComponentsRoute
-  '/ref-as-prop': typeof RefAsPropRoute
-  '/server-actions': typeof ServerActionsRoute
-  '/use': typeof UseRoute
-  '/useActionState': typeof UseActionStateRoute
-  '/useFormStatus': typeof UseFormStatusRoute
-  '/useOptimistic': typeof UseOptimisticRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/action-formAction': typeof ActionFormActionRoute
-  '/actions': typeof ActionsRoute
-  '/async-transitions': typeof AsyncTransitionsRoute
-  '/metadata-stylesheet': typeof MetadataStylesheetRoute
-  '/preloading-apis': typeof PreloadingApisRoute
-  '/react-server-components': typeof ReactServerComponentsRoute
-  '/ref-as-prop': typeof RefAsPropRoute
-  '/server-actions': typeof ServerActionsRoute
-  '/use': typeof UseRoute
-  '/useActionState': typeof UseActionStateRoute
-  '/useFormStatus': typeof UseFormStatusRoute
-  '/useOptimistic': typeof UseOptimisticRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/action-formAction': typeof ActionFormActionRoute
-  '/actions': typeof ActionsRoute
-  '/async-transitions': typeof AsyncTransitionsRoute
-  '/metadata-stylesheet': typeof MetadataStylesheetRoute
-  '/preloading-apis': typeof PreloadingApisRoute
-  '/react-server-components': typeof ReactServerComponentsRoute
-  '/ref-as-prop': typeof RefAsPropRoute
-  '/server-actions': typeof ServerActionsRoute
-  '/use': typeof UseRoute
-  '/useActionState': typeof UseActionStateRoute
-  '/useFormStatus': typeof UseFormStatusRoute
-  '/useOptimistic': typeof UseOptimisticRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/action-formAction'
-    | '/actions'
-    | '/async-transitions'
-    | '/metadata-stylesheet'
-    | '/preloading-apis'
-    | '/react-server-components'
-    | '/ref-as-prop'
-    | '/server-actions'
-    | '/use'
-    | '/useActionState'
-    | '/useFormStatus'
-    | '/useOptimistic'
+  fullPaths: '/'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/action-formAction'
-    | '/actions'
-    | '/async-transitions'
-    | '/metadata-stylesheet'
-    | '/preloading-apis'
-    | '/react-server-components'
-    | '/ref-as-prop'
-    | '/server-actions'
-    | '/use'
-    | '/useActionState'
-    | '/useFormStatus'
-    | '/useOptimistic'
-  id:
-    | '__root__'
-    | '/'
-    | '/action-formAction'
-    | '/actions'
-    | '/async-transitions'
-    | '/metadata-stylesheet'
-    | '/preloading-apis'
-    | '/react-server-components'
-    | '/ref-as-prop'
-    | '/server-actions'
-    | '/use'
-    | '/useActionState'
-    | '/useFormStatus'
-    | '/useOptimistic'
+  to: '/'
+  id: '__root__' | '/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  ActionFormActionRoute: typeof ActionFormActionRoute
-  ActionsRoute: typeof ActionsRoute
-  AsyncTransitionsRoute: typeof AsyncTransitionsRoute
-  MetadataStylesheetRoute: typeof MetadataStylesheetRoute
-  PreloadingApisRoute: typeof PreloadingApisRoute
-  ReactServerComponentsRoute: typeof ReactServerComponentsRoute
-  RefAsPropRoute: typeof RefAsPropRoute
-  ServerActionsRoute: typeof ServerActionsRoute
-  UseRoute: typeof UseRoute
-  UseActionStateRoute: typeof UseActionStateRoute
-  UseFormStatusRoute: typeof UseFormStatusRoute
-  UseOptimisticRoute: typeof UseOptimisticRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/useOptimistic': {
-      id: '/useOptimistic'
-      path: '/useOptimistic'
-      fullPath: '/useOptimistic'
-      preLoaderRoute: typeof UseOptimisticRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/useFormStatus': {
-      id: '/useFormStatus'
-      path: '/useFormStatus'
-      fullPath: '/useFormStatus'
-      preLoaderRoute: typeof UseFormStatusRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/useActionState': {
-      id: '/useActionState'
-      path: '/useActionState'
-      fullPath: '/useActionState'
-      preLoaderRoute: typeof UseActionStateRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/use': {
-      id: '/use'
-      path: '/use'
-      fullPath: '/use'
-      preLoaderRoute: typeof UseRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/server-actions': {
-      id: '/server-actions'
-      path: '/server-actions'
-      fullPath: '/server-actions'
-      preLoaderRoute: typeof ServerActionsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/ref-as-prop': {
-      id: '/ref-as-prop'
-      path: '/ref-as-prop'
-      fullPath: '/ref-as-prop'
-      preLoaderRoute: typeof RefAsPropRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/react-server-components': {
-      id: '/react-server-components'
-      path: '/react-server-components'
-      fullPath: '/react-server-components'
-      preLoaderRoute: typeof ReactServerComponentsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preloading-apis': {
-      id: '/preloading-apis'
-      path: '/preloading-apis'
-      fullPath: '/preloading-apis'
-      preLoaderRoute: typeof PreloadingApisRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/metadata-stylesheet': {
-      id: '/metadata-stylesheet'
-      path: '/metadata-stylesheet'
-      fullPath: '/metadata-stylesheet'
-      preLoaderRoute: typeof MetadataStylesheetRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/async-transitions': {
-      id: '/async-transitions'
-      path: '/async-transitions'
-      fullPath: '/async-transitions'
-      preLoaderRoute: typeof AsyncTransitionsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/actions': {
-      id: '/actions'
-      path: '/actions'
-      fullPath: '/actions'
-      preLoaderRoute: typeof ActionsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/action-formAction': {
-      id: '/action-formAction'
-      path: '/action-formAction'
-      fullPath: '/action-formAction'
-      preLoaderRoute: typeof ActionFormActionRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
@@ -297,19 +53,16 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  ActionFormActionRoute: ActionFormActionRoute,
-  ActionsRoute: ActionsRoute,
-  AsyncTransitionsRoute: AsyncTransitionsRoute,
-  MetadataStylesheetRoute: MetadataStylesheetRoute,
-  PreloadingApisRoute: PreloadingApisRoute,
-  ReactServerComponentsRoute: ReactServerComponentsRoute,
-  RefAsPropRoute: RefAsPropRoute,
-  ServerActionsRoute: ServerActionsRoute,
-  UseRoute: UseRoute,
-  UseActionStateRoute: UseActionStateRoute,
-  UseFormStatusRoute: UseFormStatusRoute,
-  UseOptimisticRoute: UseOptimisticRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+  }
+}
