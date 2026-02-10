@@ -9,10 +9,8 @@
     "test": "vitest run",
     "lint": "oxlint --react-plugin --vitest-plugin --jsx-a11y-plugin .",
     "lint:fix": "oxlint --react-plugin --vitest-plugin --jsx-a11y-plugin --fix .",
-    "fmt": "oxfmt --write .",
-    "fmt:check": "oxfmt --check .",
-    "format": "pnpm run fmt",
-    "format:check": "pnpm run fmt:check",
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check .",
     "check": "pnpm run format:check && pnpm run lint"
   },
   "dependencies": {
