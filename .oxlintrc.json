@@ -1,0 +1,7 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["eslint", "unicorn", "typescript", "oxc", "react", "vitest", "jsx-a11y"],
+  "rules": {
+    "rules-of-hooks": "error"
+  }
+}

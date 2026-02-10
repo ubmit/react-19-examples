@@ -7,8 +7,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest run",
-    "lint": "oxlint --react-plugin --vitest-plugin --jsx-a11y-plugin .",
-    "lint:fix": "oxlint --react-plugin --vitest-plugin --jsx-a11y-plugin --fix .",
+    "lint": "oxlint .",
+    "lint:fix": "oxlint --fix .",
     "format": "oxfmt --write .",
     "format:check": "oxfmt --check ."
   },
