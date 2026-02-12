@@ -1,13 +1,14 @@
 import { CodeTag, DocSection } from "@/components/home/doc-section";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { sleep } from "@/lib/utils";
 import { Suspense, use, useDeferredValue, useState } from "react";
 
 type SearchResult = { id: number; text: string };
 
 async function fetchResults(query: string): Promise<SearchResult[]> {
   console.log("Fetching results for", query);
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+  await sleep(1000);
   console.log("awaited for fake delay, returning results");
   return [
     { id: 1, text: "Result 1" },

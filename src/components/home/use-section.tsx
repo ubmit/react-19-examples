@@ -1,8 +1,9 @@
 import { CodeTag, DocSection } from "@/components/home/doc-section";
+import { sleep } from "@/lib/utils";
 import { createContext, Suspense, type ReactNode, use } from "react";
 
 async function fetchComments() {
-  await new Promise((resolve) => setTimeout(resolve, 3000));
+  await sleep(3000);
   return [
     { id: 1, text: "foo" },
     { id: 2, text: "bar" },

@@ -1,18 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { sleep } from "@/lib/utils";
 import { redirect } from "@tanstack/react-router";
 import { useActionState, useOptimistic, useState, useTransition } from "react";
 import { useFormStatus } from "react-dom";
 import { DocSection, ExampleCard } from "@/components/home/doc-section";
 
 async function updateName(name: string) {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+  await sleep(1000);
   return { message: `Failed to update name to ${name}`, status: "error" };
 }
 
 async function updateNameSuccessfully(name: string) {
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+  await sleep(2000);
   return name;
 }
 
