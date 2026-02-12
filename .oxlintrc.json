@@ -1,6 +1,7 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
   "plugins": ["eslint", "unicorn", "typescript", "oxc", "react", "vitest", "jsx-a11y"],
+  "ignorePatterns": ["src/routeTree.gen.ts"],
   "rules": {
     "rules-of-hooks": "error"
   }
